@@ -10,6 +10,8 @@
     <string name="Register">Register</string>
     <string name="Email">Email</string>
     <string name="Password">Password</string>
+    <string name="Phone">Phone</string>
+
 
     <!-- Home Page Strings-->
     <string name="Home_screen">Home Screen (:</string>
