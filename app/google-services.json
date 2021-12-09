@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "196402569245",
+    "project_id": "ztyle-eef34",
+    "storage_bucket": "ztyle-eef34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196402569245:android:a07d754ae5fb7da5e766f4",
+        "android_client_info": {
+          "package_name": "com.example.testbench"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196402569245-ja8nvt6c42e6csotob59a3i854efkfei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfVDXa1FniWT84uoEZyP0XUASKOHLo05E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "196402569245-ja8nvt6c42e6csotob59a3i854efkfei.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
