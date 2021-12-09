@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="68dp"
         android:ems="10"
-        android:hint="@string/password"
+        android:hint="@string/Password"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/button4"
@@ -25,7 +25,7 @@
         android:layout_width="207dp"
         android:layout_height="48dp"
         android:layout_marginBottom="212dp"
-        android:text="Login"
+        android:text="@string/Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.436"
@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/email"
+        android:hint="@string/Email"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
@@ -45,5 +45,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.922" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="146dp"
+        android:layout_height="47dp"
+        android:text="@string/ZTYLE"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.504" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

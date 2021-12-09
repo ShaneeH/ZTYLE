@@ -20,10 +20,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void goToHome(View v){
+    public void goToRegister(View v){
 
-
+        //This is mapped to the Register Button in the Layout
         Intent startReg = new Intent(MainActivity.this, Register.class);
+        startActivity(startReg);
+
+
+    }
+
+    public void goToLogin(View v){
+
+
+        Intent startReg = new Intent(MainActivity.this, Login.class);
         startActivity(startReg);
 
 
