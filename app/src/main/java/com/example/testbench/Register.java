@@ -43,6 +43,10 @@ public class Register extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar);
 
+        if(fAuth.getCurrentUser() != null){
+          //  Toast.makeText(Register.this , "User Created 1" , Toast.LENGTH_SHORT).show();
+        }
+
 
         mReg_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,37 +55,26 @@ public class Register extends AppCompatActivity {
                 String Email = mReg_email.getText().toString().trim();
                 String Password = mReg_password.getText().toString().trim();
 
-                if(TextUtils.isEmpty(Email) || !Email.contains("@")){
+                if(TextUtils.isEmpty(Email) || !Email.contains("@") || !Email.contains(".")){
                     //User has not entered any value in Email Field
                     mReg_email.setError("Enter Valid Email Address");
                     return;
                 }
 
                 if(TextUtils.isEmpty(Password)){
-                    //User has not entered any value in Password Field
+                    //User has not entered any  value in Password Field
                     mReg_password.setError("Enter Password");
                     return;
                 }
 
+
+
+                //Password Validation
                 if(Password.length() < 6){
                     mReg_password.setError("Password must be atleast 6 characters long\nYours is "+Password.length());
                     return;
                 }
 
-                for(int i = 0; i <Password.length(); i++){
-                        int cnt = 0;
-                        char c = Password.charAt(i);
-                        Boolean isUpper = Character.isUpperCase(c);
-                        if (isUpper == true){
-                            cnt++ ;
-                        }
-                            if (cnt < 1){
-                                mReg_password.setError("Password must be contain atleast 1 Upper Case Character");
-                                return;
-
-                            }
-
-                }
 
                 progressBar.setVisibility(View.VISIBLE);
 
@@ -90,11 +83,14 @@ public class Register extends AppCompatActivity {
                 fAuth.createUserWithEmailAndPassword(Email , Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        //Once the User has signed up
                         if(task.isSuccessful()){
-                            Toast.makeText(Register.this , "User Created" , Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getApplicationContext(), Home.class));
+                             Toast.makeText(Register.this , "User Created" , Toast.LENGTH_SHORT).show();
+                             setContentView(R.layout.activity_home);
 
-                        } else{
+
+                        } // If something went wrong
+                        else{
                                 Toast.makeText(Register.this, "Error"  + task.getException().getMessage() , Toast.LENGTH_SHORT).show();
 
                         }
